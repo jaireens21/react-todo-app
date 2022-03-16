@@ -1,0 +1,39 @@
+.Todo{
+    margin:0.5rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.crossOut{
+    text-decoration: line-through;
+    color: rgba(196, 193, 192, 0.7);
+   
+}
+
+.Todo button{
+    border-color: transparent;
+    background-color: white;
+}
+.Todo i{
+    font-size: 1.2rem;
+}
+.Todo input[type=checkbox] {
+    accent-color: rgb(187, 15, 15);
+  }
+
+.EditForm input{
+    margin:0.5rem 0;
+    height:1.5rem;
+    font-size: 1.2rem;
+    max-width: 70%;
+    
+}
+
+.EditForm button{
+    border-color: transparent;
+    background-color: white;
+}
+.EditForm i{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
