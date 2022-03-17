@@ -6,21 +6,17 @@ import Todo from "./Todo";
 
 export default function TodoApp(){
 
-    // let initialTodos= JSON.parse(window.localStorage.getItem("todos")) || [
-    //     {id:uuidv4(), task:"Wash the car", completed:false},
-    //     {id:uuidv4(), task:"Meal prep", completed:false},
-    //     {id:uuidv4(), task:"Shop for decor", completed:true}
-    // ];
-    let initialTodos= [
+    let initialTodos= JSON.parse(window.localStorage.getItem("todos")) || [
         {id:uuidv4(), task:"Wash the car", completed:false},
         {id:uuidv4(), task:"Meal prep", completed:false},
         {id:uuidv4(), task:"Shop for decor", completed:true}
     ];
+    
     const [todos, setTodos]=useState(initialTodos);
     
-    // useEffect(()=>{
-    //     window.localStorage.setItem("todos", JSON.stringify(todos));
-    // }, [todos]);
+    useEffect(()=>{
+        window.localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
 
     function saveNewTask(newTask){
        setTodos([...todos,{id:uuidv4(), task:newTask, completed:false}]);
