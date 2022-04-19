@@ -9,10 +9,12 @@ export default function useInputState(initialVal=""){
     const handleChange=(e)=>{
         setState(e.target.value);
     }
+    //update the state as and when changes are made in the input field
 
     const reset=()=>{
         setState("");
     }
+    //reset state to ""
 
     return [state,handleChange,reset];
 }

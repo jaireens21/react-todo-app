@@ -17,6 +17,7 @@ export default function TodoApp(){
     useEffect(()=>{
         window.localStorage.setItem("todos", JSON.stringify(todos));
     }, [todos]);
+    //if todos changes, update window.localStorage
 
     function saveNewTask(newTask){
        setTodos([...todos,{id:uuidv4(), task:newTask, completed:false}]);
@@ -35,9 +36,9 @@ export default function TodoApp(){
     return(
         <div className="ToDoApp">
             <h1>MY TO-DO APP</h1>
-            {/* <p>Made using Hooks in React</p> */}
-            
+                        
             <TodoForm saveNewTask={saveNewTask}/>
+
             <div className="TodoList">
                 {todos.map(todo=>(
                     <Todo 
@@ -49,8 +50,8 @@ export default function TodoApp(){
                         removeTask={removeTask}
                         saveEditedTask={saveEditedTask}
                     />
-                    
                 ))}
+                
             </div>
             
 
